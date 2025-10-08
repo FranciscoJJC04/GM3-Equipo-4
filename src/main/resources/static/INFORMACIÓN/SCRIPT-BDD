@@ -15,7 +15,7 @@ DROP TABLE IF EXISTS INSCRIPCION;
 
 CREATE TABLE INSCRIPCION (
     id_inscripcion INT AUTO_INCREMENT PRIMARY KEY,
-    tipo ENUM('individual','familiar') NOT NULL,
+    tipo ENUM('INDIVIDUAL','FAMILIAR') NOT NULL,
     cuota_total DECIMAL(8,2) NOT NULL,
     fecha_creacion DATE NOT NULL,
     dni_titular CHAR(9)
@@ -45,7 +45,7 @@ CREATE TABLE PATRON (
 CREATE TABLE EMBARCACION (
     matricula VARCHAR(20) PRIMARY KEY,
     nombre VARCHAR(50) UNIQUE NOT NULL,
-    tipo ENUM('velero','yate','lancha','catamaran') NOT NULL,
+    tipo ENUM('VELERO','YATE','LANCHA','CATAMARAN') NOT NULL,
     plazas INT NOT NULL,
     eslora DECIMAL(5,2),
     manga DECIMAL(5,2),
